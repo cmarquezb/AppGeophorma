@@ -7,35 +7,47 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <ion-list-header>Seleccione Tipo de Servicio</ion-list-header>
-      
-        <ion-item>
-          <ion-label>Instalación</ion-label>
-          <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
-            <ion-select-option value="Elec01">Enchufes</ion-select-option>
-            <ion-select-option value="Elec02">Lamparas Techo</ion-select-option>
-            <ion-select-option value="Elec03">Luces Embutidas</ion-select-option>
-            <ion-select-option value="Elec04">Tableros</ion-select-option>
-            <ion-select-option value="Elec05">Termicas</ion-select-option>
-            <ion-select-option value="Elec06">Tierras</ion-select-option>
-            <ion-select-option value="Elec07">Luces Arañas</ion-select-option>
-            <ion-select-option value="Elec08">Alojenas Exterior</ion-select-option>
-            <ion-select-option value="Elec09">Timers</ion-select-option>
-            <ion-select-option value="Elec10">Timbres Eléctricos</ion-select-option>
-            <ion-select-option value="Elec11">Cableados domicio</ion-select-option>
-          </ion-select>
-        </ion-item>
-      
-        <ion-item>
-          <ion-label>Reposición</ion-label>
-          <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
-            <ion-select-option value="Relec01">Enchufes y Centros</ion-select-option>
-            <!--<ion-select-option value="Relec01" selected>Enchufes y Centros</ion-select-option>-->
-            <ion-select-option value="Relec02">Cables</ion-select-option>
-            <ion-select-option value="Relec03">Dicroicas y/o Alojenas</ion-select-option>
-            <ion-select-option value="Relec04">Timbres eléctricos 1</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+  <ion-card class="welcome-card">
+      <img  width="350" height="140" src="/assets/electricidadfin.jpg" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>Seleccione Tipo de Servicio</ion-card-subtitle>          
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+            <ion-list-header>Selección de Servicio</ion-list-header>      
+            <ion-item>
+              <ion-label>11 tipos de Instalación</ion-label>
+              <ion-select [(ngModel)]="toppings" multiple="true" cancelText="Cancelar" okText="Aceptar" [compareWith]="compareFn">
+                <ion-select-option value="Elec01">Enchufes</ion-select-option>
+                <ion-select-option value="Elec02">Lamparas Techo</ion-select-option>
+                <ion-select-option value="Elec03">Luces Embutidas</ion-select-option>
+                <ion-select-option value="Elec04">Tableros</ion-select-option>
+                <ion-select-option value="Elec05">Termicas</ion-select-option>
+                <ion-select-option value="Elec06">Tierras</ion-select-option>
+                <ion-select-option value="Elec07">Luces Arañas</ion-select-option>
+                <ion-select-option value="Elec08">Alojenas Exterior</ion-select-option>
+                <ion-select-option value="Elec09">Timers</ion-select-option>
+                <ion-select-option value="Elec10">Timbres Eléctricos</ion-select-option>
+                <ion-select-option value="Elec11">Cableados domicio</ion-select-option>
+              </ion-select>
+            </ion-item>      
+            <ion-item>
+              <ion-label>4 Tipos de Reposición</ion-label>
+              <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
+                <ion-select-option value="Relec01">Enchufes y Centros</ion-select-option>
+                <!--<ion-select-option value="Relec01" selected>Enchufes y Centros</ion-select-option>-->
+                <ion-select-option value="Relec02">Cables</ion-select-option>
+                <ion-select-option value="Relec03">Dicroicas y/o Alojenas</ion-select-option>
+                <ion-select-option value="Relec04">Timbres eléctricos 1</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card> 
+      <ion-list lines="none">                               
+          <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+            <ion-icon slot="start" color="medium" name="cart"></ion-icon>
+            <ion-label>Carro Compras</ion-label>
+          </ion-item>
+      </ion-list>   
 </ion-content>

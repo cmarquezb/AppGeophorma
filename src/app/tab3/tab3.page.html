@@ -1,50 +1,60 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Servicios Fontanería
+      Servicios Sanitarios
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Seleccione Tipo de Servicio</ion-list-header>
-  
-    <ion-item>
-      <ion-label>Instalación Fontanería</ion-label>
-      <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
-        <ion-select-option value="Fon01">Tuberias</ion-select-option>
-        <ion-select-option value="Fon02">Bachas</ion-select-option>
-        <ion-select-option value="Fon03">Inodoros</ion-select-option>
-        <ion-select-option value="Fon04">Lavamanos</ion-select-option>
-        <ion-select-option value="Fon05">Duchas o Tinas</ion-select-option>
-        <ion-select-option value="Fon06">Lavadero</ion-select-option>
-        <ion-select-option value="Fon07">Colector aguas</ion-select-option>        
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Instalación Gasfitería</ion-label>
-      <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
-        <ion-select-option value="Gas01">Tuberias</ion-select-option>
-        <ion-select-option value="Gas02">TermoFusión</ion-select-option>
-        <ion-select-option value="Gas03">Llaves de paso</ion-select-option>
-        <ion-select-option value="Gas04">Cocinas y estufas</ion-select-option>
-        <ion-select-option value="Gas05">Termos o calderas de condensación</ion-select-option>     
-        <ion-select-option value="Gas06">Presión</ion-select-option>    
-      </ion-select>
-    </ion-item>
-
-
-    <ion-item>
-      <ion-label>Mantención y/o Reparación</ion-label>
-      <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
-        <ion-select-option value="Relec01">Llaves</ion-select-option>
-        <!--<ion-select-option value="Relec01" selected>Enchufes y Centros</ion-select-option>-->
-        <ion-select-option value="Rep02">Atasco del lavabo</ion-select-option>
-        <ion-select-option value="Rep03">Detección de Fugas</ion-select-option>
-        <ion-select-option value="Rep04">Limpieza</ion-select-option>
-        <ion-select-option value="Rep04">Inspección de tuberias</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
+  <ion-card class="welcome-card">
+      <img  width="350" height="140" src="/assets/sanitarios.jpg" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>Seleccione Tipo de Servicio</ion-card-subtitle>          
+      </ion-card-header>
+      <ion-card-content>
+          <ion-list>       
+              <ion-item>
+                <ion-label>Instalación Sanitaria</ion-label>
+                <ion-select ng-model="seleccionados" multiple="true" cancelText="Cancelar" okText="Aceptar">
+                  <ion-select-option value="Fon01">Tuberias</ion-select-option>
+                  <ion-select-option value="Fon02">Bachas</ion-select-option>
+                  <ion-select-option value="Fon03">Inodoros</ion-select-option>
+                  <ion-select-option value="Fon04">Lavamanos</ion-select-option>
+                  <ion-select-option value="Fon05">Duchas o Tinas</ion-select-option>
+                  <ion-select-option value="Fon06">Lavadero</ion-select-option>
+                  <ion-select-option value="Fon07">Colector aguas</ion-select-option>        
+                </ion-select>
+              </ion-item>
+              <ion-item>
+                <ion-label>Instalación Gasfitería</ion-label>
+                <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
+                  <ion-select-option value="Gas01">Tuberias</ion-select-option>
+                  <ion-select-option value="Gas02">TermoFusión</ion-select-option>
+                  <ion-select-option value="Gas03">Llaves de paso</ion-select-option>
+                  <ion-select-option value="Gas04">Cocinas y estufas</ion-select-option>
+                  <ion-select-option value="Gas05">Termos o calderas de condensación</ion-select-option>     
+                  <ion-select-option value="Gas06">Presión</ion-select-option>    
+                </ion-select>
+              </ion-item>           
+              <ion-item>
+                <ion-label>Mantención y/o Reparación</ion-label>
+                <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
+                  <ion-select-option value="Relec01">Llaves</ion-select-option>
+                  <!--<ion-select-option value="Relec01" selected>Enchufes y Centros</ion-select-option>-->
+                  <ion-select-option value="Rep02">Atasco del lavabo</ion-select-option>
+                  <ion-select-option value="Rep03">Detección de Fugas</ion-select-option>
+                  <ion-select-option value="Rep04">Limpieza</ion-select-option>
+                  <ion-select-option value="Rep04">Inspección de tuberias</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+      </ion-card-content>
+  </ion-card> 
+  <ion-list lines="none">                               
+      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+        <ion-icon slot="start" color="medium" name="cart"></ion-icon>
+        <ion-label>Carro Compras</ion-label>
+      </ion-item>
+  </ion-list>     
 </ion-content>

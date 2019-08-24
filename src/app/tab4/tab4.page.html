@@ -1,9 +1,53 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Servicios de Pintura y Albañilería
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card class="welcome-card">
+    <img  width="350" height="140" src="/assets/pintor.jpg" alt="" />
+    <ion-card-header>
+      <ion-card-subtitle>Seleccione Tipo de Servicio</ion-card-subtitle>          
+    </ion-card-header>
+    <ion-card-content>
+        <ion-list>       
+            <ion-item>
+              <ion-label>Pinturas m2</ion-label>
+              <ion-select [(ngModel)]="carro40" multiple="true" cancelText="Cancelar" okText="Aceptar">
+                <ion-select-option *ngFor="let itemp of pinta" [value]="itemp">{{itemp.ProductName}} {{itemp.Precio | currency}}</ion-select-option>                                                
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label>Albañilería m2</ion-label>
+              <ion-select [(ngModel)]="carro41" multiple="true" cancelText="Cancelar" okText="Aceptar">
+                <ion-select-option *ngFor="let itema of alba" [value]="itema">{{itema.ProductName}} {{itema.Precio | currency}}</ion-select-option>   
+              </ion-select>
+            </ion-item>           
+            <ion-item>
+              <ion-label>Mantención y/o Reparación</ion-label>
+              <ion-select [(ngModel)]="carro42" multiple="true" cancelText="Cancelar" okText="Aceptar">                
+                <!--<ion-select-option value="Relec01" selected>Enchufes y Centros</ion-select-option>-->
+                <ion-select-option *ngFor="let itemb of manta4" [value]="itemb">{{itemb.ProductName}} {{itemb.Precio | currency}}</ion-select-option>  
+              </ion-select>
+            </ion-item>
+          </ion-list>
+    </ion-card-content>
+</ion-card> 
+<ion-list lines="none" *ngFor="let itemcar2 of carro40">
+  Pintura de: {{itemcar2.ProductName}} {{itemcar2.Precio | currency}}    
+</ion-list>      
+<ion-list lines="none" *ngFor="let itemcar3 of carro41">
+  Albañilería de: {{itemcar3.ProductName}} {{itemcar3.Precio | currency}}    
+</ion-list> 
+<ion-list lines="none" *ngFor="let itemcar4 of carro42">
+  Mantención de: {{itemcar4.ProductName}} {{itemcar4.Precio | currency}}    
+</ion-list>                        
+  <ion-item>
+    <ion-label>Carro Compras Monto $ {{getSum()}}</ion-label> 
+    <ion-icon slot="start" color="medium" name="cart"></ion-icon>            
+  </ion-item>   
+  <ion-button (click)="enviacar()">Aceptar</ion-button>
+</ion-content>
