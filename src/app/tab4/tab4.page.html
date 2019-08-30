@@ -37,17 +37,90 @@
     </ion-card-content>
 </ion-card> 
 <ion-list lines="none" *ngFor="let itemcar2 of carro40">
-  Pintura de: {{itemcar2.ProductName}} {{itemcar2.Precio | currency}}    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div>
+              Pintura:
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+              {{itemcar2.ProductName}}
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+              {{itemcar2.Precio | currency}} 
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>       
 </ion-list>      
 <ion-list lines="none" *ngFor="let itemcar3 of carro41">
-  Albañilería de: {{itemcar3.ProductName}} {{itemcar3.Precio | currency}}    
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div>
+              Albañilería:
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+              {{itemcar3.ProductName}}
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+              {{itemcar3.Precio | currency}}  
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>         
 </ion-list> 
 <ion-list lines="none" *ngFor="let itemcar4 of carro42">
-  Mantención de: {{itemcar4.ProductName}} {{itemcar4.Precio | currency}}    
+  <ion-grid>
+    <ion-row>
+        <ion-col>
+          <div>
+              Mantención:
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+              {{itemcar4.ProductName}}
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+              {{itemcar4.Precio | currency}}  
+          </div>
+        </ion-col>
+    </ion-row>
+  </ion-grid>         
 </ion-list>                        
   <ion-item>
-    <ion-label>Carro Compras Monto $ {{getSum()}}</ion-label> 
-    <ion-icon slot="start" color="medium" name="cart"></ion-icon>            
+    <ion-label>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                  <div>
+                      Monto
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                      Total
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                      {{getSum() | currency}}  
+                  </div>
+                </ion-col>
+            </ion-row>
+          </ion-grid>   
+    </ion-label>               
   </ion-item>   
   <ion-button (click)="enviacar()">Aceptar</ion-button>
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -7,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab5.page.scss'],
 })
 export class Tab5Page implements OnInit {
-  
-  constructor () {}
+  argumento = null;
+  constructor (private activateRoute: ActivatedRoute) {}
    
   ngOnInit() {
+    this.argumento = this.activateRoute.snapshot.paramMap.get('id');
+    
+    //OK this.argumento = this.activateRoute.snapshot.params;
+    //this.argumento = this.activateRoute.snapshot.data;
+    console.log(this.argumento);
+    //this.argumento = this.activateRoute.snapshot.data;
+    //this.argumento = this.activateRoute.snapshot
+    //let id = route.paramMap.get('id');
+   // return this.dataService.getData(id);
   }
 
 }
