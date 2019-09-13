@@ -36,11 +36,11 @@
           </ion-list>
     </ion-card-content>
 </ion-card> 
-<ion-list lines="none" *ngFor="let itemcar2 of carro40">
+<ion-list lines="none" *ngFor="let itemcar2 of carro40" class="">
     <ion-grid>
-      <ion-row>
+      <ion-row class="cell-1">
         <ion-col>
-          <div>
+          <div text-left>
               Pintura:
           </div>
         </ion-col>
@@ -50,7 +50,7 @@
           </div>
         </ion-col>
         <ion-col>
-          <div>
+          <div text-right>
               {{itemcar2.Precio | currency}} 
           </div>
         </ion-col>
@@ -59,9 +59,9 @@
 </ion-list>      
 <ion-list lines="none" *ngFor="let itemcar3 of carro41">
   <ion-grid>
-      <ion-row>
+      <ion-row class="cell-1">
         <ion-col>
-          <div>
+          <div text-left>
               Albañilería:
           </div>
         </ion-col>
@@ -71,7 +71,7 @@
           </div>
         </ion-col>
         <ion-col>
-          <div>
+          <div text-right>
               {{itemcar3.Precio | currency}}  
           </div>
         </ion-col>
@@ -80,9 +80,9 @@
 </ion-list> 
 <ion-list lines="none" *ngFor="let itemcar4 of carro42">
   <ion-grid>
-    <ion-row>
+    <ion-row class="cell-1">
         <ion-col>
-          <div>
+          <div text-left>
               Mantención:
           </div>
         </ion-col>
@@ -92,19 +92,19 @@
           </div>
         </ion-col>
         <ion-col>
-          <div>
+          <div text-right>
               {{itemcar4.Precio | currency}}  
           </div>
         </ion-col>
     </ion-row>
   </ion-grid>         
 </ion-list>                        
-  <ion-item>
+  <ion-list>
     <ion-label>
         <ion-grid>
             <ion-row>
                 <ion-col>
-                  <div>
+                  <div text-left>
                       Monto
                   </div>
                 </ion-col>
@@ -113,14 +113,14 @@
                       Total
                   </div>
                 </ion-col>
-                <ion-col>
-                  <div>
+                <ion-col class="cell-3">
+                  <div text-right>
                       {{getSum() | currency}}  
                   </div>
                 </ion-col>
             </ion-row>
           </ion-grid>   
     </ion-label>               
-  </ion-item>   
-  <ion-button (click)="enviacar()">Aceptar</ion-button>
+  </ion-list>   
+  <ion-button class="button button-block button-positive" (click)="enviacar()">Aceptar</ion-button>
 </ion-content>

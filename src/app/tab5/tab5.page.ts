@@ -8,19 +8,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./tab5.page.scss'],
 })
 export class Tab5Page implements OnInit {
-  argumento = null;
+  argumento=null;
   constructor (private activateRoute: ActivatedRoute) {}
    
   ngOnInit() {
-    this.argumento = this.activateRoute.snapshot.paramMap.get('id');
     
+    this.argumento = JSON.parse(this.activateRoute.snapshot.paramMap.get('id'));
+     
     //OK this.argumento = this.activateRoute.snapshot.params;
     //this.argumento = this.activateRoute.snapshot.data;
     console.log(this.argumento);
-    //this.argumento = this.activateRoute.snapshot.data;
-    //this.argumento = this.activateRoute.snapshot
-    //let id = route.paramMap.get('id');
-   // return this.dataService.getData(id);
+
   }
 
 }

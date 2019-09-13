@@ -1,32 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Su Carro de compras</ion-title>
+    <ion-title>tab6</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list lines="none" *ngFor="let item of argumento">
+  <ion-button class="button button-block button-positive" (click)="ionViewDibLoad()">Aceptar</ion-button>
+  <ion-list lines="none" *ngFor="let usuario of usuarios">
     <ion-grid>
         <ion-row class="cell-4">
           <ion-col>
             <div>
-                Servicio:
+              {{usuario.id}}
             </div>
           </ion-col>
           <ion-col>
             <div>
-                {{item.ProductName}}
+                {{usuario.name}}
             </div>
           </ion-col>
           <ion-col>
             <div>
-                {{item.Precio | currency}}  
+                {{usuario.email}}  
             </div>
           </ion-col>
           <ion-col class="">
-              <ion-checkbox checked="true" color="primary" border-radius></ion-checkbox>
+              <ion-checkbox radius="false" color="primary" border-radius></ion-checkbox>
           </ion-col>
         </ion-row>
       </ion-grid>         
-  </ion-list>        
+  </ion-list>          
 </ion-content>

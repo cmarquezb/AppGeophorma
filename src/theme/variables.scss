@@ -74,4 +74,33 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+  ion-grid {
+    display: grid;
+    // grid-template-columns: auto auto auto;
+    grid-template-rows: 8px;     
+    grid-row-gap: 0px;
+    align-items: start;
+  }
+}
+.cell-1 {
+  background-color: #C5DCFC;
+}
+.cell-2 {
+  background-color: burlywood;
+}
+.cell-3 {
+  background-color: rgb(57, 107, 177);
+}
+.cell-4 {
+  background-color: rgb(179, 252, 197);
+  ion-grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30% 10%;
+  }
+}
+.cell-5 {
+  background-color: #73A7F9;
+}
+.cell-6 {
+  background-color: #8CB9FA;
 }
