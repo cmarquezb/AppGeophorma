@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   export class Tab6Provider {
     
     constructor(public http:HttpClient) {
-      console.log("Paso por ak");
+      console.log("contected");
     }
     obtenerdata(){
       return this.http.get('https://jsonplaceholder.typicode.com/users');

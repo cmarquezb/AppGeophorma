@@ -18,7 +18,6 @@ export class Tab6Page {
       (error)=>{console.log(error);}
     )
   }
-
 }
 
 

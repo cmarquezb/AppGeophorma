@@ -8,7 +8,7 @@
   <ion-button class="button button-block button-positive" (click)="ionViewDibLoad()">Aceptar</ion-button>
   <ion-list lines="none" *ngFor="let usuario of usuarios">
     <ion-grid>
-        <ion-row class="cell-4">
+        <ion-row class="cell-6">
           <ion-col>
             <div>
               {{usuario.id}}
@@ -16,16 +16,13 @@
           </ion-col>
           <ion-col>
             <div>
-                {{usuario.name}}
+              {{usuario.name}}
             </div>
           </ion-col>
           <ion-col>
             <div>
-                {{usuario.email}}  
+              {{usuario.email}}  
             </div>
-          </ion-col>
-          <ion-col class="">
-              <ion-checkbox radius="false" color="primary" border-radius></ion-checkbox>
           </ion-col>
         </ion-row>
       </ion-grid>         
